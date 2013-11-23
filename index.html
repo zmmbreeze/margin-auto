@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>overconstrain</title>
-    <link rel="stylesheet" href="i.css" />
     <style type="text/css">
     body {
         margin: 0;
@@ -20,7 +19,7 @@
         margin: 0;
         font-weight: normal;
         font-size: 1em;
-        line-height: 2;
+        line-height: 1.5;
     }
 
     h1,
@@ -32,6 +31,7 @@
 
     .container {
         float: left;
+        margin-right: 10px;
         clear: left;
         position: relative;
         width: 300px;
@@ -47,8 +47,7 @@
     }
 
     .text {
-        float: left;
-        margin-left: 10px;
+        overflow: hidden;
     }
     .text pre {
         margin: 0;
@@ -58,12 +57,15 @@
         background: #FEFEFE;
     }
     </style>
+    <link rel="stylesheet" href="slider.css" />
 </head>
 <body>
     <h1>CSS `margin:auto`的妙用</h1>
 
-    <div class="slide">
-    <div class="row">
+    <div class="slider">
+    <input id="slider" type="checkbox"/>
+    <label for="slider"></label>
+    <div class="row" id="slider-1">
         <div class="container">
             <div class="demo-1" demo></div>
         </div>
@@ -76,7 +78,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-2">
         <div class="container">
             <div class="demo-2" demo></div>
         </div>
@@ -90,7 +92,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-3">
         <div class="container">
             <div class="demo-3" demo></div>
         </div>
@@ -104,7 +106,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-4">
         <div class="container">
             <div class="demo-4" demo></div>
         </div>
@@ -121,7 +123,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-5">
         <div class="container">
             <div class="demo-5" demo></div>
         </div>
@@ -140,7 +142,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-6">
         <div class="container">
             <div class="demo-6" demo></div>
         </div>
@@ -159,7 +161,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-7">
         <div class="container">
             <div class="demo-7" demo></div>
         </div>
@@ -178,7 +180,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-8">
         <div class="container">
             <div class="demo-8" demo></div>
         </div>
@@ -197,7 +199,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="slider-9">
         <div class="container">
             <img class="demo-9" demo src="http://placehold.it/600x400/3BAFDA/FFFFFF" width="600" height="400"/>
         </div>

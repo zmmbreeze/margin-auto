@@ -1,0 +1,80 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+
+    width: 610px;
+    height: 190px;
+}
+
+.slider > div {
+    margin: 0 auto;
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+}
+
+.slider > div:target {
+    display: block;
+}
+
+.slider > div:target + div {
+}
+
+/**
+ * fullscreen checkbox
+ */
+.slider > input {
+    display: none;
+}
+.slider > label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.slider > label::before,
+.slider > label::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #CCC;
+    -webkit-transition: border-color 0.5s;
+    transition: border-color 0.5s;
+}
+.slider > label::before {
+    top: 5px;
+    right: 5px;
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+.slider > label::after {
+    bottom: 5px;
+    left: 5px;
+    border-right-width: 0;
+    border-top-width: 0;
+}
+.slider > label:hover::before,
+.slider > label:hover::after {
+    border-color: #666;
+}
+.slider > input:checked + label::before,
+.slider > label:hover::before {
+    top: 4px;
+    right: 4px;
+}
+.slider > input:checked + label::after,
+.slider > label:hover::after {
+    bottom: 4px;
+    left: 4px;
+}
+.slider > input:checked + label:hover::before {
+    top: 5px;
+    right: 5px;
+}
+.slider > input:checked + label:hover::after {
+    bottom: 5px;
+    left: 5px;
+}
